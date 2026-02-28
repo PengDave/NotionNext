@@ -84,11 +84,7 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true
   },
-  output: process.env.EXPORT
-    ? 'export'
-    : process.env.NEXT_BUILD_STANDALONE === 'true'
-      ? 'standalone'
-      : undefined,
+  output: 'standalone', // 强制启用 standalone 模式，适配 Netlify
   staticPageGenerationTimeout: 120,
 
   // 性能优化配置
